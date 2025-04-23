@@ -57,9 +57,9 @@ ggplot(aes(x = reorder(stage, population), fill = Gender,
   scale_fill_manual(values = c("#f4c2c2", "#89CFF0")) +
   labs(x = "Application Stage", 
        y = "Number", 
-       title = "Only 26% of CAS appointees are women",
+       title = "Only 26% of CAS appointees in 2023 were women",
        subtitle = "Distribution of males and females at the application, shortlisting, and nomination stages",
-       caption = "Data Source: PSC (publicservice.go.ke) | By @willyokech",
+       caption = "Data Source: PSC (publicservice.go.ke)",
        fill = "") +
   geom_text(x=3, y=3100, color = "#f4c2c2", size = 7, family= "Helvetica", fontface="bold", label="33% Female") +
   geom_text(x=2, y=1200, color = "#f4c2c2", size = 7, family =  "Helvetica", fontface="bold", label="36% Female") +
@@ -78,7 +78,7 @@ ggplot(aes(x = reorder(stage, population), fill = Gender,
         plot.background = element_rect(fill = "beige", colour = "beige"),
         panel.background = element_rect(fill = "beige", colour = "beige")) 
 
-ggsave("images/app_stl_nom_cas_gender.jpg", width = 12, height = 8)
+ggsave("sub_pro_8_psc_job_analysis_kenya/images/app_stl_nom_cas_gender.jpg", width = 12, height = 8)
 
 #################################################################################
 # PWD

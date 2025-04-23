@@ -44,9 +44,9 @@ library(ggparliament)
 
 # 2) Load the required datasets
 
-parl_mps <- read_excel("sub_pro_4_national_assembly/processed_tables/Parliament_Sep_2022.xlsx")
-parl_composition_condensed <- read_excel("sub_pro_4_national_assembly/processed_tables/Party_Membership_Condensed_Sep_2022.xlsx")
-parl_composition <- read_excel("sub_pro_4_national_assembly/processed_tables/Party_Membership_Sep_2022.xlsx")
+parl_mps <- read_excel("sub_pro_6_national_assembly_kenya/processed_tables/Parliament_Sep_2022.xlsx")
+parl_composition_condensed <- read_excel("sub_pro_6_national_assembly_kenya/processed_tables/Party_Membership_Condensed_Sep_2022.xlsx")
+parl_composition <- read_excel("sub_pro_6_national_assembly_kenya/processed_tables/Party_Membership_Sep_2022.xlsx")
 
 # 3) Clean data filter out the relevant datasets
 
@@ -90,8 +90,10 @@ ggplot(ke_semicircle, aes(x=x, y=y, colour = abbreviation)) +
   labs(title = "The 13th Parliament of the Republic of Kenya",
        subtitle = "Composition of MPs elected in August 2022",
        color = "Party",
-       caption = "* Small parties have 5 or less MPs\nSource: National Assembly of Kenya | By: @afro_dataviz") +
+       caption = "* Small parties have 5 or less MPs\nSource: National Assembly of Kenya") +
   scale_colour_manual(values = ke_semicircle$colors,
                       limits = ke_semicircle$abbreviation)
 
+ggsave("sub_pro_6_national_assembly_kenya/images/parliament.png", 
+       width = 12, height = 6, dpi = 300)
 #### Write a note to include the parties with 5 or less MPs and their numbers  

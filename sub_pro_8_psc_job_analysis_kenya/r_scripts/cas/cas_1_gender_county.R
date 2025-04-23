@@ -32,7 +32,7 @@ library(ggrepel)
 # 1) Load the required data, sort, and review the structure
 
 # All the applicant data
-all_cas <- read_excel("processed_tables/cas/CAS_1.xlsx")
+all_cas <- read_excel("sub_pro_8_psc_job_analysis_kenya/processed_tables/cas/CAS_1.xlsx")
 
 # All the applicant data by gender
 all_cas_gender_df <- data.frame(tabyl(all_cas, Gender))
@@ -110,7 +110,7 @@ ggsave("images/all_cas_county.jpg", width = 8, height = 8)
 # 1) Load the required data, sort, and review the structure
 
 # All the applicant data
-stl_cas <- read_excel("processed_tables/cas/CAS_2.xlsx")
+stl_cas <- read_excel("sub_pro_8_psc_job_analysis_kenya/processed_tables/cas/CAS_2.xlsx")
 stl_cas <- stl_cas %>%
   mutate(Gender = ifelse(Gender == "F", "Female",
                          ifelse(Gender == "M", "Male", Gender)))
@@ -195,7 +195,7 @@ ggsave("images/stl_cas_county.jpg", width = 12, height = 12)
 # 1) Load the required data, sort, and review the structure
 
 # All the applicant data
-nom_cas <- read_excel("processed_tables/cas/CAS_3.xlsx")
+nom_cas <- read_excel("sub_pro_8_psc_job_analysis_kenya/processed_tables/cas/CAS_3.xlsx")
 nom_cas <- nom_cas %>%
   mutate(Gender = ifelse(Gender == "F", "Female",
                          ifelse(Gender == "M", "Male", Gender)))
