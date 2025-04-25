@@ -4,7 +4,7 @@ This repository contains a collection of data visualizations about various topic
 
 ***NOTE: Direct links to the code used to produce the image(s) below will be provided ASAP (if not provided already).***
 
-Example visualizations
+## Example visualizations
 
 ## 1) Unlabeled Map of Kenya
 
